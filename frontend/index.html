@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="icon" href="/icons/icon-192.svg" />
+<link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+<meta name="theme-color" content="#0f172a" />
+<link rel="stylesheet" href="/styles.css" />
+<title>Расходы</title>
+</head>
+<body>
+<div id="app">
+	<header>
+		<h1>Расходы</h1>
+		<button id="logoutBtn" class="hidden">Выйти</button>
+	</header>
+	<main>
+		<section id="auth">
+			<div class="card">
+				<h2>Вход</h2>
+				<input id="loginEmail" type="email" placeholder="Email" />
+				<input id="loginPassword" type="password" placeholder="Пароль" />
+				<button id="loginBtn">Войти</button>
+			</div>
+			<div class="card">
+				<h2>Регистрация</h2>
+				<input id="regEmail" type="email" placeholder="Email" />
+				<input id="regPassword" type="password" placeholder="Пароль" />
+				<button id="registerBtn">Зарегистрироваться</button>
+			</div>
+		</section>
+		<section id="appSection" class="hidden">
+			<div class="card">
+				<h2>Добавить расход</h2>
+				<input id="amount" type="number" step="0.01" placeholder="Сумма" />
+				<input id="category" type="text" placeholder="Категория" />
+				<input id="note" type="text" placeholder="Заметка" />
+				<input id="date" type="date" />
+				<button id="addExpenseBtn">Добавить</button>
+			</div>
+			<div class="card">
+				<h2>Мои расходы</h2>
+				<ul id="expenses"></ul>
+			</div>
+		</section>
+	</main>
+	<div id="toast" class="toast hidden"></div>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
